@@ -3,18 +3,42 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8137E22424EE43D00036AB8C /* employees_empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 815049A124EE3701001B3063 /* employees_empty.json */; };
+		8137E22524EE43D30036AB8C /* employees_malformed.json in Resources */ = {isa = PBXBuildFile; fileRef = 8150499F24EE3701001B3063 /* employees_malformed.json */; };
+		8137E22624EE43D60036AB8C /* employees.json in Resources */ = {isa = PBXBuildFile; fileRef = 815049A024EE3701001B3063 /* employees.json */; };
+		8150499B24EE054F001B3063 /* SquareAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8150499A24EE054F001B3063 /* SquareAPI.swift */; };
+		8150499E24EE160E001B3063 /* SquareEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8150499D24EE160E001B3063 /* SquareEndpoints.swift */; };
+		815049A224EE3701001B3063 /* employees_malformed.json in Resources */ = {isa = PBXBuildFile; fileRef = 8150499F24EE3701001B3063 /* employees_malformed.json */; };
+		815049A324EE3701001B3063 /* employees.json in Resources */ = {isa = PBXBuildFile; fileRef = 815049A024EE3701001B3063 /* employees.json */; };
+		815049A424EE3701001B3063 /* employees_empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 815049A124EE3701001B3063 /* employees_empty.json */; };
+		81673B0C24ED9D9D003580C4 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81673B0B24ED9D9D003580C4 /* String+Extension.swift */; };
 		8169981D24E3D93000943FB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8169981C24E3D93000943FB4 /* AppDelegate.swift */; };
 		8169981F24E3D93000943FB4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8169981E24E3D93000943FB4 /* SceneDelegate.swift */; };
-		8169982124E3D93000943FB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8169982024E3D93000943FB4 /* ViewController.swift */; };
-		8169982424E3D93000943FB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8169982224E3D93000943FB4 /* Main.storyboard */; };
 		8169982624E3D93000943FB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8169982524E3D93000943FB4 /* Assets.xcassets */; };
 		8169982924E3D93000943FB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8169982724E3D93000943FB4 /* LaunchScreen.storyboard */; };
 		8169983424E3D93000943FB4 /* square_mobile_projectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8169983324E3D93000943FB4 /* square_mobile_projectTests.swift */; };
-		8169983F24E3D93000943FB4 /* square_mobile_projectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8169983E24E3D93000943FB4 /* square_mobile_projectUITests.swift */; };
+		8169985224E3DD1400943FB4 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8169985124E3DD1400943FB4 /* Employee.swift */; };
+		8169985B24E3E2F000943FB4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8169985A24E3E2F000943FB4 /* Kingfisher */; };
+		8169986324E3E48300943FB4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8169986224E3E48300943FB4 /* Constants.swift */; };
+		8169986524E50ADC00943FB4 /* EmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8169986424E50ADC00943FB4 /* EmployeeViewModel.swift */; };
+		8169986724E51BF100943FB4 /* EmployeeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8169986624E51BF100943FB4 /* EmployeeTableViewController.swift */; };
+		8169986924E51E3D00943FB4 /* EmployeeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8169986824E51E3D00943FB4 /* EmployeeDataSource.swift */; };
+		8169986B24E5372D00943FB4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8169986A24E5372D00943FB4 /* Colors.swift */; };
+		8169986D24E5399D00943FB4 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8169986C24E5399D00943FB4 /* Layout.swift */; };
+		8169986F24E53D6200943FB4 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8169986E24E53D6200943FB4 /* Fonts.swift */; };
+		8169987124E542DD00943FB4 /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8169987024E542DD00943FB4 /* EmployeeTableViewCell.swift */; };
+		8169987524E61DC900943FB4 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8169987424E61DC900943FB4 /* Networking.swift */; };
+		BA45BBBD24E7ACC000836E4D /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA45BBBC24E7ACC000836E4D /* UILabel+Extension.swift */; };
+		BA47173F24E658800086C4E0 /* Stevia in Frameworks */ = {isa = PBXBuildFile; productRef = BA47173E24E658800086C4E0 /* Stevia */; };
+		BA47174124E66AB00086C4E0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BA47174024E66AAF0086C4E0 /* README.md */; };
+		BA47174324E674030086C4E0 /* MockTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA47174224E674030086C4E0 /* MockTask.swift */; };
+		BA47174524E6745C0086C4E0 /* MockSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA47174424E6745C0086C4E0 /* MockSession.swift */; };
+		BA47174824E6763D0086C4E0 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA47174724E6763D0086C4E0 /* NetworkManagerTests.swift */; };
+		BA47174D24E67D3C0086C4E0 /* MockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA47174C24E67D3C0086C4E0 /* MockedData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,30 +49,40 @@
 			remoteGlobalIDString = 8169981824E3D93000943FB4;
 			remoteInfo = "square-mobile-project";
 		};
-		8169983B24E3D93000943FB4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8169981124E3D93000943FB4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8169981824E3D93000943FB4;
-			remoteInfo = "square-mobile-project";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8150499A24EE054F001B3063 /* SquareAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareAPI.swift; sourceTree = "<group>"; };
+		8150499D24EE160E001B3063 /* SquareEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareEndpoints.swift; sourceTree = "<group>"; };
+		8150499F24EE3701001B3063 /* employees_malformed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = employees_malformed.json; sourceTree = "<group>"; };
+		815049A024EE3701001B3063 /* employees.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = employees.json; sourceTree = "<group>"; };
+		815049A124EE3701001B3063 /* employees_empty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = employees_empty.json; sourceTree = "<group>"; };
+		81673B0B24ED9D9D003580C4 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		8169981924E3D93000943FB4 /* square-mobile-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "square-mobile-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8169981C24E3D93000943FB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8169981E24E3D93000943FB4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8169982024E3D93000943FB4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8169982324E3D93000943FB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8169982524E3D93000943FB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8169982824E3D93000943FB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8169982A24E3D93000943FB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8169982F24E3D93000943FB4 /* square-mobile-projectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "square-mobile-projectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8169983324E3D93000943FB4 /* square_mobile_projectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = square_mobile_projectTests.swift; sourceTree = "<group>"; };
 		8169983524E3D93000943FB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8169983A24E3D93000943FB4 /* square-mobile-projectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "square-mobile-projectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8169983E24E3D93000943FB4 /* square_mobile_projectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = square_mobile_projectUITests.swift; sourceTree = "<group>"; };
-		8169984024E3D93000943FB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8169985124E3DD1400943FB4 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		8169986224E3E48300943FB4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8169986424E50ADC00943FB4 /* EmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModel.swift; sourceTree = "<group>"; };
+		8169986624E51BF100943FB4 /* EmployeeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewController.swift; sourceTree = "<group>"; };
+		8169986824E51E3D00943FB4 /* EmployeeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDataSource.swift; sourceTree = "<group>"; };
+		8169986A24E5372D00943FB4 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		8169986C24E5399D00943FB4 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		8169986E24E53D6200943FB4 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		8169987024E542DD00943FB4 /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
+		8169987424E61DC900943FB4 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		BA45BBBC24E7ACC000836E4D /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		BA47174024E66AAF0086C4E0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BA47174224E674030086C4E0 /* MockTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTask.swift; sourceTree = "<group>"; };
+		BA47174424E6745C0086C4E0 /* MockSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSession.swift; sourceTree = "<group>"; };
+		BA47174724E6763D0086C4E0 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		BA47174C24E67D3C0086C4E0 /* MockedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +90,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA47173F24E658800086C4E0 /* Stevia in Frameworks */,
+				8169985B24E3E2F000943FB4 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,22 +102,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8169983724E3D93000943FB4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8150499924EE0532001B3063 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8150499A24EE054F001B3063 /* SquareAPI.swift */,
+				8150499D24EE160E001B3063 /* SquareEndpoints.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		8150499C24EE0E52001B3063 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				8169987424E61DC900943FB4 /* Networking.swift */,
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
 		8169981024E3D93000943FB4 = {
 			isa = PBXGroup;
 			children = (
+				BA47174024E66AAF0086C4E0 /* README.md */,
 				8169981B24E3D93000943FB4 /* square-mobile-project */,
 				8169983224E3D93000943FB4 /* square-mobile-projectTests */,
-				8169983D24E3D93000943FB4 /* square-mobile-projectUITests */,
 				8169981A24E3D93000943FB4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +137,6 @@
 			children = (
 				8169981924E3D93000943FB4 /* square-mobile-project.app */,
 				8169982F24E3D93000943FB4 /* square-mobile-projectTests.xctest */,
-				8169983A24E3D93000943FB4 /* square-mobile-projectUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,11 +146,12 @@
 			children = (
 				8169981C24E3D93000943FB4 /* AppDelegate.swift */,
 				8169981E24E3D93000943FB4 /* SceneDelegate.swift */,
-				8169982024E3D93000943FB4 /* ViewController.swift */,
-				8169982224E3D93000943FB4 /* Main.storyboard */,
-				8169982524E3D93000943FB4 /* Assets.xcassets */,
-				8169982724E3D93000943FB4 /* LaunchScreen.storyboard */,
-				8169982A24E3D93000943FB4 /* Info.plist */,
+				8169984C24E3D97600943FB4 /* Model */,
+				8169984D24E3D97D00943FB4 /* View */,
+				8169984E24E3D98A00943FB4 /* ViewModel */,
+				8169985F24E3E40900943FB4 /* Networking */,
+				8169985024E3D9A800943FB4 /* Helpers */,
+				8169984F24E3D9A100943FB4 /* Resources */,
 			);
 			path = "square-mobile-project";
 			sourceTree = "<group>";
@@ -113,19 +159,91 @@
 		8169983224E3D93000943FB4 /* square-mobile-projectTests */ = {
 			isa = PBXGroup;
 			children = (
+				BA47174624E676060086C4E0 /* Mocks */,
 				8169983324E3D93000943FB4 /* square_mobile_projectTests.swift */,
 				8169983524E3D93000943FB4 /* Info.plist */,
+				BA47174724E6763D0086C4E0 /* NetworkManagerTests.swift */,
 			);
 			path = "square-mobile-projectTests";
 			sourceTree = "<group>";
 		};
-		8169983D24E3D93000943FB4 /* square-mobile-projectUITests */ = {
+		8169984C24E3D97600943FB4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8169983E24E3D93000943FB4 /* square_mobile_projectUITests.swift */,
-				8169984024E3D93000943FB4 /* Info.plist */,
+				8169985124E3DD1400943FB4 /* Employee.swift */,
 			);
-			path = "square-mobile-projectUITests";
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8169984D24E3D97D00943FB4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8169986624E51BF100943FB4 /* EmployeeTableViewController.swift */,
+				8169987024E542DD00943FB4 /* EmployeeTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8169984E24E3D98A00943FB4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8169986424E50ADC00943FB4 /* EmployeeViewModel.swift */,
+				8169986824E51E3D00943FB4 /* EmployeeDataSource.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8169984F24E3D9A100943FB4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BA47175424E67DA20086C4E0 /* JSON */,
+				8169982524E3D93000943FB4 /* Assets.xcassets */,
+				8169982724E3D93000943FB4 /* LaunchScreen.storyboard */,
+				8169982A24E3D93000943FB4 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8169985024E3D9A800943FB4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8169986224E3E48300943FB4 /* Constants.swift */,
+				8169986A24E5372D00943FB4 /* Colors.swift */,
+				8169986C24E5399D00943FB4 /* Layout.swift */,
+				8169986E24E53D6200943FB4 /* Fonts.swift */,
+				BA45BBBC24E7ACC000836E4D /* UILabel+Extension.swift */,
+				81673B0B24ED9D9D003580C4 /* String+Extension.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8169985F24E3E40900943FB4 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8150499C24EE0E52001B3063 /* HTTP */,
+				8150499924EE0532001B3063 /* Service */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		BA47174624E676060086C4E0 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				BA47174224E674030086C4E0 /* MockTask.swift */,
+				BA47174424E6745C0086C4E0 /* MockSession.swift */,
+				BA47174C24E67D3C0086C4E0 /* MockedData.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		BA47175424E67DA20086C4E0 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				815049A124EE3701001B3063 /* employees_empty.json */,
+				8150499F24EE3701001B3063 /* employees_malformed.json */,
+				815049A024EE3701001B3063 /* employees.json */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +262,10 @@
 			dependencies = (
 			);
 			name = "square-mobile-project";
+			packageProductDependencies = (
+				8169985A24E3E2F000943FB4 /* Kingfisher */,
+				BA47173E24E658800086C4E0 /* Stevia */,
+			);
 			productName = "square-mobile-project";
 			productReference = 8169981924E3D93000943FB4 /* square-mobile-project.app */;
 			productType = "com.apple.product-type.application";
@@ -166,24 +288,6 @@
 			productReference = 8169982F24E3D93000943FB4 /* square-mobile-projectTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8169983924E3D93000943FB4 /* square-mobile-projectUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8169984924E3D93000943FB4 /* Build configuration list for PBXNativeTarget "square-mobile-projectUITests" */;
-			buildPhases = (
-				8169983624E3D93000943FB4 /* Sources */,
-				8169983724E3D93000943FB4 /* Frameworks */,
-				8169983824E3D93000943FB4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8169983C24E3D93000943FB4 /* PBXTargetDependency */,
-			);
-			name = "square-mobile-projectUITests";
-			productName = "square-mobile-projectUITests";
-			productReference = 8169983A24E3D93000943FB4 /* square-mobile-projectUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -200,10 +304,6 @@
 						CreatedOnToolsVersion = 12.0;
 						TestTargetID = 8169981824E3D93000943FB4;
 					};
-					8169983924E3D93000943FB4 = {
-						CreatedOnToolsVersion = 12.0;
-						TestTargetID = 8169981824E3D93000943FB4;
-					};
 				};
 			};
 			buildConfigurationList = 8169981424E3D93000943FB4 /* Build configuration list for PBXProject "square-mobile-project" */;
@@ -215,13 +315,16 @@
 				Base,
 			);
 			mainGroup = 8169981024E3D93000943FB4;
+			packageReferences = (
+				8169985924E3E2F000943FB4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				BA47173D24E658800086C4E0 /* XCRemoteSwiftPackageReference "Stevia" */,
+			);
 			productRefGroup = 8169981A24E3D93000943FB4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				8169981824E3D93000943FB4 /* square-mobile-project */,
 				8169982E24E3D93000943FB4 /* square-mobile-projectTests */,
-				8169983924E3D93000943FB4 /* square-mobile-projectUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -231,9 +334,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA47174124E66AB00086C4E0 /* README.md in Resources */,
+				815049A224EE3701001B3063 /* employees_malformed.json in Resources */,
 				8169982924E3D93000943FB4 /* LaunchScreen.storyboard in Resources */,
+				815049A324EE3701001B3063 /* employees.json in Resources */,
 				8169982624E3D93000943FB4 /* Assets.xcassets in Resources */,
-				8169982424E3D93000943FB4 /* Main.storyboard in Resources */,
+				815049A424EE3701001B3063 /* employees_empty.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,13 +347,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8169983824E3D93000943FB4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				8137E22424EE43D00036AB8C /* employees_empty.json in Resources */,
+				8137E22624EE43D60036AB8C /* employees.json in Resources */,
+				8137E22524EE43D30036AB8C /* employees_malformed.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +360,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8169982124E3D93000943FB4 /* ViewController.swift in Sources */,
+				8169985224E3DD1400943FB4 /* Employee.swift in Sources */,
+				8169986B24E5372D00943FB4 /* Colors.swift in Sources */,
+				8169986524E50ADC00943FB4 /* EmployeeViewModel.swift in Sources */,
 				8169981D24E3D93000943FB4 /* AppDelegate.swift in Sources */,
+				8150499B24EE054F001B3063 /* SquareAPI.swift in Sources */,
+				8150499E24EE160E001B3063 /* SquareEndpoints.swift in Sources */,
+				8169987124E542DD00943FB4 /* EmployeeTableViewCell.swift in Sources */,
+				8169986724E51BF100943FB4 /* EmployeeTableViewController.swift in Sources */,
 				8169981F24E3D93000943FB4 /* SceneDelegate.swift in Sources */,
+				8169986D24E5399D00943FB4 /* Layout.swift in Sources */,
+				81673B0C24ED9D9D003580C4 /* String+Extension.swift in Sources */,
+				8169987524E61DC900943FB4 /* Networking.swift in Sources */,
+				8169986F24E53D6200943FB4 /* Fonts.swift in Sources */,
+				8169986924E51E3D00943FB4 /* EmployeeDataSource.swift in Sources */,
+				BA45BBBD24E7ACC000836E4D /* UILabel+Extension.swift in Sources */,
+				8169986324E3E48300943FB4 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,15 +383,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA47174D24E67D3C0086C4E0 /* MockedData.swift in Sources */,
+				BA47174824E6763D0086C4E0 /* NetworkManagerTests.swift in Sources */,
+				BA47174524E6745C0086C4E0 /* MockSession.swift in Sources */,
 				8169983424E3D93000943FB4 /* square_mobile_projectTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8169983624E3D93000943FB4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8169983F24E3D93000943FB4 /* square_mobile_projectUITests.swift in Sources */,
+				BA47174324E674030086C4E0 /* MockTask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,22 +399,9 @@
 			target = 8169981824E3D93000943FB4 /* square-mobile-project */;
 			targetProxy = 8169983024E3D93000943FB4 /* PBXContainerItemProxy */;
 		};
-		8169983C24E3D93000943FB4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8169981824E3D93000943FB4 /* square-mobile-project */;
-			targetProxy = 8169983B24E3D93000943FB4 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8169982224E3D93000943FB4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8169982324E3D93000943FB4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8169982724E3D93000943FB4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -446,7 +544,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.turntlabs.square-mobile-project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -465,7 +563,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.turntlabs.square-mobile-project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -513,46 +611,6 @@
 			};
 			name = Release;
 		};
-		8169984A24E3D93000943FB4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NELGRQX33K;
-				INFOPLIST_FILE = "square-mobile-projectUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.turntlabs.square-mobile-projectUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "square-mobile-project";
-			};
-			name = Debug;
-		};
-		8169984B24E3D93000943FB4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NELGRQX33K;
-				INFOPLIST_FILE = "square-mobile-projectUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.turntlabs.square-mobile-projectUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "square-mobile-project";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -583,16 +641,39 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8169984924E3D93000943FB4 /* Build configuration list for PBXNativeTarget "square-mobile-projectUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8169984A24E3D93000943FB4 /* Debug */,
-				8169984B24E3D93000943FB4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8169985924E3E2F000943FB4 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.14.1;
+			};
+		};
+		BA47173D24E658800086C4E0 /* XCRemoteSwiftPackageReference "Stevia" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/freshOS/Stevia";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8169985A24E3E2F000943FB4 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8169985924E3E2F000943FB4 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		BA47173E24E658800086C4E0 /* Stevia */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA47173D24E658800086C4E0 /* XCRemoteSwiftPackageReference "Stevia" */;
+			productName = Stevia;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8169981124E3D93000943FB4 /* Project object */;
 }

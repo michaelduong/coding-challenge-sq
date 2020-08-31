@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  square-mobile-project
 //
-//  Created by Swift Team Six on 8/12/20.
+//  Created by Michael Duong on 8/12/20.
 //
 
 import UIKit
@@ -11,12 +11,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        let networkManager = NetworkManager()
+        let api = SquareAPI(network: networkManager)
+        let vc = EmployeeTableViewController(style: .insetGrouped, api: api)
+        let navVC = UINavigationController(rootViewController: vc)
+        
+        if let windowScene = scene as? UIWindowScene {
+            let window = UIWindow(windowScene: windowScene)
+            window.rootViewController = navVC
+            self.window = window
+            window.makeKeyAndVisible()
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  square-mobile-project
 //
-//  Created by Swift Team Six on 8/12/20.
+//  Created by Michael Duong on 8/12/20.
 //
 
 import UIKit
