@@ -11,11 +11,11 @@ final class EmployeeTableViewController: UITableViewController {
     
     // MARK: - Properties & Outlets
     private let dataSource = EmployeeDataSource()
-    private var api: EmployeeProvider
+    private var viewModel: EmployeeViewModelInterface!
     
     // MARK: - View Lifecycle Methods
-    init(style: UITableView.Style, api: EmployeeProvider) {
-        self.api = api
+    init(style: UITableView.Style, viewModel: EmployeeViewModelInterface) {
+        self.viewModel = viewModel
         super.init(style: style)
     }
     
@@ -34,6 +34,8 @@ final class EmployeeTableViewController: UITableViewController {
         tableView.backgroundColor = UIColor.backgroundGray
         title = NSLocalizedString(Constants.Strings.screenTitle, comment: "")
         setupTableView()
+        viewModel.delegate = self
+        dataSource.employeeViewModel = viewModel
     }
     
     private func setupTableView() {
@@ -42,34 +44,15 @@ final class EmployeeTableViewController: UITableViewController {
         tableView.estimatedRowHeight = 134
         tableView.rowHeight = 134
     }
-    
-    // MARK: - Network Call
-    private func populateTableView() {
-        api.fetchEmployees { [weak self] result in
-            switch result {
-            case .success(let employees):
-                let employeeObjects = employees.employees
-                let employeeViewModelArray = employeeObjects.compactMap { EmployeeViewModel(employee: $0) }
-                if employeeViewModelArray.isEmpty {
-                    DispatchQueue.main.async {
-                        self?.displayEmptyAlert()
-                    }
-                } else {
-                    DispatchQueue.main.async {
-                        self?.dataSource.employeeViewModels = employeeViewModelArray
-                        self?.tableView.reloadData()
-                    }                    
-                }
-            case .failure(let error):
-                DispatchQueue.main.async {
-                    self?.displayErrorAlert(of: error)
-                }
-            }
-        }
+}
+
+// MARK: - EmployeeViewModel Delegate Methods
+extension EmployeeTableViewController: EmployeeViewModelDelegate {
+    func populateTableView() {
+        tableView.reloadData()
     }
     
-    // MARK: - Alert
-    private func displayErrorAlert(of errorType: RequestError) {
+    func displayErrorAlert(of errorType: RequestError) {
         var message = ""
         switch errorType {
         case .badURL:
@@ -88,7 +71,7 @@ final class EmployeeTableViewController: UITableViewController {
         present(ac, animated: true)
     }
     
-    private func displayEmptyAlert() {
+    func displayEmptyAlert() {
         let ac = UIAlertController(title: NSLocalizedString("Empty", comment: ""), message: NSLocalizedString("The network request returned an empty list/JSON data.", comment: ""), preferredStyle: .alert)
         let okAction = UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style: .default)
         ac.addAction(okAction)

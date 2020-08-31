@@ -7,27 +7,88 @@
 
 import UIKit
 
-struct EmployeeViewModel {
-    let uuid: String
-    let name: String
-    let phone: String?
-    let email: String
-    let bio: String?
-    let team: String
-    let type: String?
-    var imageUrl: URL?
+protocol EmployeeViewModelDelegate: AnyObject {
+    func populateTableView()
+    func displayErrorAlert(of errorType: RequestError)
+    func displayEmptyAlert()
+}
+
+protocol EmployeeViewModelInterface {
+    var employees: [Employee] { get set }
+    var delegate: EmployeeViewModelDelegate? { get set }
     
-    init(employee: Employee) {
-        self.uuid = employee.uuid
-        self.name = employee.fullName
-        self.phone = employee.phoneNumber?.toPhoneNumber()
-        self.email = employee.emailAddress
-        self.bio = employee.biography
-        self.team = employee.team
-        self.type = employee.employeeType?.rawValue
+    func employeeName(at index: Int) -> String
+    func employeePhone(at index: Int) -> String?
+    func employeeTeam(at index: Int) -> String
+    func employeeEmail(at index: Int) -> String
+    func employeePicture(at index: Int) -> URL?
+    func fetchEmployees(_ completionHandler: @escaping ([Employee]) -> Void)
+}
+
+class EmployeeViewModel: EmployeeViewModelInterface {
+    private let api: EmployeeProvider
+    public weak var delegate: EmployeeViewModelDelegate?
+    var employees: [Employee] = []
+
+    func employeeName(at index: Int) -> String {
+        return employees[index].fullName
+    }
+    
+    func employeePhone(at index: Int) -> String? {
+        return employees[index].phoneNumber?.toPhoneNumber()
+    }
+    
+    func employeeTeam(at index: Int) -> String {
+        return employees[index].team
+    }
+    
+    func employeeEmail(at index: Int) -> String {
+        return employees[index].emailAddress
+    }
+    
+    func employeePicture(at index: Int) -> URL? {
+        if let employeeImageUrl = employees[index].photoUrlSmall {
+            return URL(string: employeeImageUrl)!
+        }
         
-        if let employeeImageUrl = employee.photoUrlSmall {
-            self.imageUrl = URL(string: employeeImageUrl)
+        return nil
+    }
+    
+    func fetchEmployees(_ completionHandler: @escaping ([Employee]) -> Void) {
+        api.fetchEmployees { [weak self] result in
+            guard let self = self else { return }
+            
+            switch result {
+            case .success(let employees):
+                let employeeObjects = employees.employees
+                self.employees = employeeObjects.compactMap { $0 }
+                if self.employees.isEmpty {
+                    DispatchQueue.main.async {
+                        self.delegate?.displayEmptyAlert()
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        self.delegate?.populateTableView()
+                    }
+                }
+            case .failure(let error):
+                DispatchQueue.main.async {
+                    self.delegate?.displayErrorAlert(of: error)
+                }
+            }
+        }
+    }
+    
+    func employee(at index: Int) -> Employee {
+        return employees[index]
+    }
+    
+    init(api: EmployeeProvider) {
+        self.api = api
+                
+        fetchEmployees { employees in
+            self.employees = employees
+            self.delegate?.populateTableView()
         }
     }
 }

@@ -10,7 +10,7 @@ import UIKit
 final class EmployeeDataSource: NSObject, UITableViewDataSource {
     
     // MARK: - Properties
-    var employeeViewModels = [EmployeeViewModel]()
+    var employeeViewModel: EmployeeViewModelInterface!
     
     // MARK: - Data Source Functions
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -18,14 +18,13 @@ final class EmployeeDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return employeeViewModels.count
+        return employeeViewModel.employees.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Strings.employeeCellId, for: indexPath) as? EmployeeTableViewCell else { return UITableViewCell() }
         
-        let employee = employeeViewModels[indexPath.row]
-        cell.employeeViewModel = employee
+        cell.bind(employeeViewModel: employeeViewModel, for: indexPath.row)
         
         return cell
     }

@@ -24,12 +24,6 @@ final class EmployeeTableViewCell: UITableViewCell {
     
     private var stackView = UIStackView()
     
-    var employeeViewModel: EmployeeViewModel! {
-        didSet {
-            bind()
-        }
-    }
-    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -72,14 +66,14 @@ final class EmployeeTableViewCell: UITableViewCell {
             .trailing(.horizontalMargin)
     }
     
-    private func bind() {
-        employeeNameLabel.text = employeeViewModel.name
-        employeeTeamLabel.text = employeeViewModel.team
-        employeeEmailLabel.text = employeeViewModel.email
-        employeePhoneLabel.text = employeeViewModel.phone
+    func bind(employeeViewModel: EmployeeViewModelInterface, for index: Int) {
+        employeeNameLabel.text = employeeViewModel.employeeName(at: index)
+        employeeTeamLabel.text = employeeViewModel.employeeTeam(at: index)
+        employeeEmailLabel.text = employeeViewModel.employeeEmail(at: index)
+        employeePhoneLabel.text = employeeViewModel.employeePhone(at: index)
         
         employeeAvatarImageView.kf.indicatorType = .activity
         let processor = RoundCornerImageProcessor(cornerRadius: .thumbnailWidth)
-        employeeAvatarImageView.kf.setImage(with: employeeViewModel.imageUrl, placeholder: UIImage(named: Constants.Images.placeholder), options: [.transition(.fade(0.2)), .processor(processor)])
+        employeeAvatarImageView.kf.setImage(with: employeeViewModel.employeePicture(at: index), placeholder: UIImage(named: Constants.Images.placeholder), options: [.transition(.fade(0.2)), .processor(processor)])
     }
 }

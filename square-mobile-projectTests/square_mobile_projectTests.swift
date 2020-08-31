@@ -19,12 +19,4 @@ class square_mobile_projectTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    func testEmployeeViewModel() {
-        let employee = Employee(uuid: "1337", fullName: "Michael Duong", phoneNumber: "9494236366", emailAddress: "michaelduong@my.com", biography: "Soon to be Cash App Team's newest iOS engineer.", photoUrlSmall: nil, photoUrlLarge: nil, team: "Banking", employeeType: .FULL_TIME)
-        let employeeViewModel = EmployeeViewModel(employee: employee)
-        
-        XCTAssertEqual(employee.fullName, employeeViewModel.name)
-        XCTAssertEqual("(949) 423-6366", employeeViewModel.phone)
-    }
 }

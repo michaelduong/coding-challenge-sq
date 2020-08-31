@@ -14,7 +14,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         let networkManager = NetworkManager()
         let api = SquareAPI(network: networkManager)
-        let vc = EmployeeTableViewController(style: .insetGrouped, api: api)
+        let viewModel = EmployeeViewModel(api: api)
+        let vc = EmployeeTableViewController(style: .insetGrouped, viewModel: viewModel)
         let navVC = UINavigationController(rootViewController: vc)
         
         if let windowScene = scene as? UIWindowScene {
