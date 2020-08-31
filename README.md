@@ -1,4 +1,4 @@
-# Square Mobile Project
+# SQ Mobile Project
 
 ## Thank you for taking the time to review this project 🎉
 • Built and compiled with Xcode 12.0 beta 4
