@@ -86,9 +86,9 @@ class EmployeeViewModel: EmployeeViewModelInterface {
     init(api: EmployeeProvider) {
         self.api = api
                 
-        fetchEmployees { employees in
-            self.employees = employees
-            self.delegate?.populateTableView()
+        fetchEmployees { [weak self] employees in
+            self?.employees = employees
+            self?.delegate?.populateTableView()
         }
     }
 }
