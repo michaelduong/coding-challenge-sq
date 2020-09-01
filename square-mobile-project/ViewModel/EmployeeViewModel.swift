@@ -79,10 +79,6 @@ class EmployeeViewModel: EmployeeViewModelInterface {
         }
     }
     
-    func employee(at index: Int) -> Employee {
-        return employees[index]
-    }
-    
     init(api: EmployeeProvider) {
         self.api = api
                 
